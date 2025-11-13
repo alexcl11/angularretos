@@ -1,0 +1,36 @@
+
+<div class="container mt-3">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card mb-3 team-card" >
+				<img [src]="dataEquipo.equipo.imagen" class="card-img-top" alt="{{dataEquipo.equipo.nombre}}">
+				<div class="card-body">
+					<h5 class="card-title">{{ dataEquipo.equipo.nombre }}</h5>
+					<p class="card-text"><strong>Champions:</strong> {{ dataEquipo.equipo.champions }}</p>
+					<p class="card-text" ><a [href]="dataEquipo.equipo.web" target="_blank">Web oficial</a></p>
+					<p class="card-text">{{ dataEquipo.equipo.descripcion }}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-8">
+			<div class="row">
+                @for(jugador of dataEquipo.jugadores; track jugador){
+                    <div class="col-6 mb-3" >
+                        <div class="card player-card ">
+                            <img [src]="jugador.imagen" class="card-img-top player-img" alt="{{jugador.nombre}}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ jugador.nombre }}</h5>
+                                <p class="card-text"><strong>Posición:</strong> {{ jugador.posicion }}</p>
+                                <p class="card-text"><strong>País:</strong> {{ jugador.pais }}</p>
+                                <p class="card-text"><small class="text-muted">Nac.: {{ jugador.fechaNacimiento }}</small></p>
+                            </div>
+                        </div>
+                    </div>
+                }
+			</div>
+		</div>
+	</div>
+</div>
+
+

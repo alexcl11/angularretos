@@ -1,0 +1,16 @@
+:host {
+	display: block;
+}
+.team-card img {
+	object-fit: cover;
+	height: 220px;
+}
+.player-card .player-img {
+	height: 160px;
+	object-fit: cover;
+}
+.player-card .card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
